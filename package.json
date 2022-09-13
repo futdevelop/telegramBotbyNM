@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "covid19-api": "^1.2.1",
     "dotenv": "^16.0.2",
     "telegraf": "^4.9.1"
   },
