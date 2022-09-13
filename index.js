@@ -10,9 +10,9 @@ bot.command('actions', async(ctx) => {
 	try {
 	await ctx.replyWithHTML('<b>Действие</b>', Markup.inlineKeyboard(
 		[
-			[Markup.button.callback('HTML', 'btn_1'),
-			Markup.button.callback('CSS', 'btn_2'),
-			Markup.button.callback('JS', 'btn_3'),],
+			[Markup.button.callback('1', 'btn_1'), Markup.button.callback('2', 'btn_2'), Markup.button.callback('3', 'btn_3'),],
+			[Markup.button.callback('4', 'btn_4'), Markup.button.callback('5', 'btn_5'), Markup.button.callback('6', 'btn_6'),],
+			[Markup.button.callback('7', 'btn_7'), Markup.button.callback('8', 'btn_8'), Markup.button.callback('9', 'btn_9'),],
 		]
 		));		
 	} catch(e) {
@@ -40,7 +40,12 @@ function addActionBot(name, src, text) {
 addActionBot('btn_1', false, text.text1);
 addActionBot('btn_2', false, text.text2);
 addActionBot('btn_3', false, text.text3);
-
+addActionBot('btn_4', false, text.text4);
+addActionBot('btn_5', false, text.text5);
+addActionBot('btn_6', false, text.text6);
+addActionBot('btn_7', false, text.text7);
+addActionBot('btn_8', false, text.text8);
+addActionBot('btn_9', false, text.text9);
 
 
 bot.launch();
