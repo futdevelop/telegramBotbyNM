@@ -1,9 +1,9 @@
 
 
 const commands = `
-/start - Перезапустить бота
-/help - Помощь
-/actions - Действие
+/start - Перезавантажити бота
+/help - Доромогти
+/numbers - Циферки
 `;
 
 const text1 = `

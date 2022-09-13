@@ -3,12 +3,12 @@ const { Telegraf, Markup } = require('telegraf')
 const text = require('./const')
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
-bot.start(ctx => ctx.reply(`Привет ${ctx.message.from.first_name ? ctx.message.from.first_name : 'незнаномец'}`));
+bot.start(ctx => ctx.reply(`Привіт ${ctx.message.from.first_name ? ctx.message.from.first_name : 'незнайомець'}`));
 bot.help(ctx => ctx.reply(text.commands));
 
-bot.command('actions', async(ctx) => {
+bot.command('numbers', async(ctx) => {
 	try {
-	await ctx.replyWithHTML('<b>Действие</b>', Markup.inlineKeyboard(
+	await ctx.replyWithHTML('<b>Виберіть цифру</b>', Markup.inlineKeyboard(
 		[
 			[Markup.button.callback('1', 'btn_1'), Markup.button.callback('2', 'btn_2'), Markup.button.callback('3', 'btn_3'),],
 			[Markup.button.callback('4', 'btn_4'), Markup.button.callback('5', 'btn_5'), Markup.button.callback('6', 'btn_6'),],
@@ -48,7 +48,8 @@ addActionBot('btn_8', false, text.text8);
 addActionBot('btn_9', false, text.text9);
 
 
-bot.launch();
+bot.launch(console.log('Бот запустився'));
+
 
 
 // Enable graceful stop
